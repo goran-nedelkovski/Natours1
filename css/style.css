@@ -1,0 +1,190 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+html {
+  font-size: 10px;        /*10px = 1rem*/
+}
+*,
+*::before,
+*::after {                          /*universal selector...select every element in the web page with margin 0 and padding 0 */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {                        /*all these font properties will be inherited to the child elements*/
+  font-family: "Lato", sans-serif;
+  font-weight: 400;         /* we'll use the 400 lato's font-weight by default */
+  /*font-size: 16px;   */       /*for now...*/
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;              /*30px = 30px/10px = 3rem */
+  box-sizing: border-box;  /* border and padding are not needed here fot total widht and height of the elements */
+
+}
+.header {
+  height: 95vh; /* 95% of the viewport height, (allmost 100% of the viewport height) */
+  background-image: linear-gradient(to right bottom,    /*we have 2 backgr-images, linear-grad() and hero. first is linear-gradient(direction, start rgba-opacity 0.7, finish rgba-opacity 0.7) and the secont image is the hero image*/
+  rgba(126, 213, 111, 0.7),
+  rgba(40, 180, 133, 0.7)),
+  url(../img/hero.jpg);    /*with ".." we go 2 levels down right into the project folder */
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+  /*za pozicioniranje na naslovite vo centar, moze i so flex vaka:
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  */
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo {
+  height: 3.5rem;
+}
+/* .logo:hover {
+  animation: moveInRight 3s ease-out;
+} */
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: 3.5rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+}
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+
+  animation: moveInRight 3s ease-out;
+  /*
+  animation-delay: 3s;
+  animation-iteration-count: 3;
+  */
+}
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+@keyframes moveInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+  }
+  80% {
+      transform: translateX(1rem);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(10rem);
+  }
+  80% {
+      transform: translateX(-1rem);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  /* position: relative;
+  left:50%;
+  transform: translate(-50%); */
+
+}
+.btn:hover {
+  transform: translateY(-0.3rem);
+}
+.btn:active {
+  transform: translateY(-0.1rem);
+}
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+ 
+* {
+  margin:0;
+  padding:0;
+}
+
+$color-primary: yellow; //yellow color in var
+$color-secondary: orange;
+$color-tertary: pink;
+$color-text-dark: #333;
+nav {
+  margin:30px;
+  background-color: $color-primary;
+  &::after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+}
+.navigation {
+  list-style:none;
+  float:left;
+  li {
+    display: inline-block;
+    margin-left:30px;
+    &:first-child {
+    margin:0;
+    }
+    a {
+      display:block;
+      text-decoration:none;
+      text-transform:uppercase;
+      color: $color-text-dark;
+    }
+  }
+}
+.buttons {
+    float:right;
+}
+
+
+*/
