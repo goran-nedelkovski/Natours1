@@ -1,0 +1,57 @@
+body {                        /*all these font properties will be inherited to the child elements*/
+    font-family: "Lato", sans-serif;
+    font-weight: 400;         /* we'll use the 400 lato's font-weight by default */
+    /*font-size: 16px;   */       /*for now...*/
+    line-height: 1.7;
+    color: $color-gray-dark;
+    padding: 3rem;              /*30px = 30px/10px = 3rem */
+  }
+
+.heading-primary {
+    color:$color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 700;
+        letter-spacing: 3.5rem;
+      
+        animation-name: moveInLeft;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+    }
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+      
+        animation: moveInRight 3s ease-out;
+        /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right,    /*we have 2 backgr-images, linear-grad() and hero. first is linear-gradient(direction, start rgba-opacity 0.7, finish rgba-opacity 0.7) and the secont image is the hero image*/
+    rgba($color-primary-light, 0.7),
+    rgba($color-primary-dark, 0.7));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+    transition: all .2s;
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+
+}

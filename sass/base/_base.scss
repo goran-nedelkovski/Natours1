@@ -1,0 +1,14 @@
+html {
+    //this defines what 1rem is
+    font-size: 10px;        /*10px = 1rem*/
+}
+*,
+*::before,
+*::after {                          /*universal selector...select every element in the web page with margin 0 and padding 0 */
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body {
+    box-sizing: border-box;  /* border and padding are not needed here fot total widht and height of the elements */
+}

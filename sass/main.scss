@@ -1,0 +1,83 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+
+@import "layout/header";
+@import "layout/grid";
+
+@import "pages/home";
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+
+
+  /* .logo:hover {
+    animation: moveInRight 3s ease-out;
+  } */
+  
+  
+  
+  
+  /*
+  COLORS:
+  
+  Light green: #7ed56f
+  Medium green: #55c57a
+  Dark green: #28b485
+   
+  * {
+    margin:0;
+    padding:0;
+  }
+  
+  $color-primary: yellow; //yellow color in var
+  $color-secondary: orange;
+  $color-tertary: pink;
+  $color-text-dark: #333;
+  nav {
+    margin:30px;
+    background-color: $color-primary;
+    &::after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+  
+  }
+  .navigation {
+    list-style:none;
+    float:left;
+    li {
+      display: inline-block;
+      margin-left:30px;
+      &:first-child {
+      margin:0;
+      }
+      a {
+        display:block;
+        text-decoration:none;
+        text-transform:uppercase;
+        color: $color-text-dark;
+      }
+    }
+  }
+  .buttons {
+      float:right;
+  }
+  
+  
+  */

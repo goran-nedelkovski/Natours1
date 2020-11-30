@@ -1,0 +1,7 @@
+@mixin clearfix {            //Height of the row is 0px, because the childs of this row(parent) are floated and the height is collapsed. to fix that, we use this code clearfix::after the floats 
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    } 
+}
