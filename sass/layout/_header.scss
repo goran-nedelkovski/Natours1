@@ -6,6 +6,7 @@
     url(../img/hero.jpg);    /*with ".." we go 2 levels down right into the project folder */
     background-size: cover;
     background-position: top;
+    -webkit-clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
     &__logo-box {
