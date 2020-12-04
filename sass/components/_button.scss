@@ -1,5 +1,7 @@
 .btn {
-    &:link, &:visited {
+    &,
+    &:link,
+    &:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -8,13 +10,17 @@
     /* position: relative;
     left:50%;
     transform: translate(-50%); */
-
+      // changes for the button element
+     border: none;
+     cursor: pointer; 
     }
         &:hover {
         transform: translateY(-0.3rem);
       }
-    &:active {
-        transform: translateY(-0.1rem);
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-0.1rem);
       }
     &--white {
         background-color:$color-white;
