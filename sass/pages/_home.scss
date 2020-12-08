@@ -2,6 +2,9 @@
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -20vh;
+    @include respond(tab-port) {     //width < 900px
+        padding: 20rem 0;
+    }
 }
 .section-features {
     padding: 20rem 0;
@@ -15,25 +18,35 @@
     & > * {
         transform: skewY(7deg);
     }
+    @include respond(tab-port) {     //width < 900px
+        padding: 10rem 0;
+    }
 }
 .section-tours {
     background-color: $color-grey-light-1;
-    padding: 25rem 0 50rem 0;
+    padding: 25rem 0 15rem 0;
     margin-top: -10rem;
+    @include respond(tab-port) {     //width < 900px
+        padding: 20rem 0 10rem 0;
+    }
 }
 .section-stories {
     position: relative;
     padding: 15rem 0;
-
+    @include respond(tab-port) {     //width < 900px
+        padding: 10rem 0;
+    }
 }
 .section-book {
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom,    /*we have 2 backgr-images, linear-grad() and hero. first is linear-gradient(direction, start rgba-opacity 0.7, finish rgba-opacity 0.7) and the secont image is the hero image*/
     $color-primary-light,
     $color-primary-dark);
-
+    @include respond(tab-port) {     //width < 900px
+        padding: 10rem 0;
+    }
 }
-.book {
+    .book {
     background-image: linear-gradient(105deg,
     rgba($color-white,.9) 0%, 
     rgba($color-white,.9) 50%,
@@ -48,5 +61,8 @@
         width: 50%;
         padding: 6rem;
         
+    }
+    @include respond(tab-port) {     //width < 900px
+        padding: 10rem 0;
     }
 }

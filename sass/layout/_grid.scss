@@ -5,6 +5,13 @@
         // margin-right: $gutter-horizontal;
     &:not(:last-child) {
         margin-bottom:$gutter-vertical;
+        @include respond(tab-port) {     //width < 900
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+    @include respond(tab-port) {     //width < 900
+        max-width: 50rem;
+        padding: 0 3rem;
     }
     @include clearfix;
     
@@ -12,9 +19,18 @@
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+            @include respond(tab-port) {     //width < 900
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        
+        }
+
+        @include respond(tab-port) {     //width < 900
+            width: 100% !important;
         }
     }
-
+    
     .col-1-of-2 {
         width: calc((100% - #{$gutter-horizontal})/2);
         
