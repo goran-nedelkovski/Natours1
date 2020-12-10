@@ -8,7 +8,11 @@
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
-    transition: all .3s;
+    transition: all .3s; 
+
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        background-color: rgba($color-black, .3);
+    }
     &:target {
         opacity: 1;
         visibility: visible;
@@ -35,16 +39,30 @@
         background-color: $color-white;
         display: table;
         overflow: hidden;
+        @include respond(tab-land) {
+            height: 75%;
+        }
+        @include respond(tab-port) {
+            height: 55%;
+        }
     }
     &__left {
         width: 33.33333%;
         display: table-cell;
+        // @include respond(tab-port) {
+        //     width: 100%;
+        //     display: block;
+        // }
     }
     &__right {
         width: 66.666667%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+        // @include respond(tab-port) {
+        //     width: 100%;
+        //     display: block;
+        // }
     }
     &__img {
         display: block;
