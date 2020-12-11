@@ -23,7 +23,21 @@ $( document ).ready(function() {
         $(".navigation__nav").hide();
         $(".navigation__background").hide();
         $( "#section-book" ).show();
+        
+        // $( ".navigation__button" ).on( "click", function( event ) {
+        //     // $( ".header" ).hide();
+        //     // $(".main").hide();
+        //     // $(".footer").hide();
+        //     $(".section-book").hide();
+        //     $(".footer").hide();
+        //     $(".navigation__nav, .navigation__background").show();
+        //     // $(".navigation__background").show();
+            
+        // });
     });
-
+    $(".navigation__button").click(function(){
+        $(".navigation__background, .navigation__nav").show();
+    });
+    
   });
   
